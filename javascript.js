@@ -58,27 +58,27 @@ function checkString(a) {
 }
 
 /* Function that add any new interest to my list of interests */
-function addInterest(myInterests, interest) {
+function addInterest(interests, interest) {
     if ( checkString(interest) ) {
-        myInterests.push(interest);
+        interests.push(interest);
     } else {
         console.log('Sorry, the interest cannot be added');
     }
 }
 
 /* Function that add any previous experience to my list */
-function addExperience(myExperience, company, jobTittle, description) {
+function addExperience(experience, company, jobTittle, description) {
     if ( checkString(company) && checkString(jobTittle) && checkString(description)) {
-        myExperience.push({nCompany: company, job: jobTittle, desc: description});
+        experience.push({nCompany: company, job: jobTittle, desc: description});
     } else {
         console.log('Sorry, the previous experience cannot be added');
     }
 }
 
 /* Function that add a particular skill to the list */
-function addSkills(mySkills, skill, cool) {
+function addSkills(skills, skill, cool) {
     if ( checkString(skill) && (typeof cool == 'boolean')) {
-        mySkills.push({nSkill: skill, isCool: cool});
+        skills.push({nSkill: skill, isCool: cool});
     } else {
         console.log('Sorry, the skill cannot be added');
     }
@@ -93,6 +93,7 @@ function displayPostition(companyName, jobTittle, description) {
     }
 }
 
+/* Function that shows one of my skills */
 function displaySkill(skill, cool) {
     if ( checkString(skill) && (typeof cool == 'boolean')) {
         if ( cool ) {
